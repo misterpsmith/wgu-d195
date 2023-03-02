@@ -14579,7 +14579,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Project:-Analysis-of-Airline-Delay-and-Cancellation-Data,-2009---2018">Project: Analysis of Airline Delay and Cancellation Data, 2009 - 2018<a class="anchor-link" href="#Project:-Analysis-of-Airline-Delay-and-Cancellation-Data,-2009---2018">&#182;</a></h1><p>A 2010 report sponsored by the Federal Aviation Administration (FAA) analyzed a variety of cost components caused by flight delays. This included the cost to airlines, cost to passengers, cost of lost demand, as well as the indirect impact of delay on the US economy. The report concluded that the total cost of all US air transportation delays in 2007 was <strong>$32.9 billion</strong>. Clearly, flight delays are a serious and widespread problem in the US. An exploration of multi-year (2009 - 2018) airline delay and cancellation data will be made to determine the cause(s) of airline delays.</p>
+<h1 id="Project:-Analysis-of-Airline-Delay-and-Cancellation-Data,-2009---2018">Project: Analysis of Airline Delay and Cancellation Data, 2009 - 2018<a class="anchor-link" href="#Project:-Analysis-of-Airline-Delay-and-Cancellation-Data,-2009---2018">&#182;</a></h1><p>A 2010 report sponsored by the Federal Aviation Administration (FAA) analyzed a variety of cost components caused by flight delays. This included the cost to airlines, cost to passengers, cost of lost demand, as well as the indirect impact of delay on the US economy. The report concluded that the total cost of all US air transportation delays in 2007 was <strong>$32.9 billion</strong>. Clearly, flight delays are a serious and widespread problem in the US. An exploration of multi-year (2009 - 2018) airline delay and cancellation data will be made to determine the cause of airline delays.</p>
+<p>The research question is, "Whether late aircraft delays are the biggest cause of flight delays?"</p>
+<p>For this project the null hypothesis is, "Late aircraft delay is not the biggest cause of flight delays."</p>
 <p>Import required libraries:</p>
 
 </div>
@@ -19239,7 +19241,7 @@ memory usage: 2.0+ GB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Repeat the Pearson Correlation:</p>
+<p>Repeat the Pearson correlation:</p>
 
 </div>
 </div>
@@ -19322,7 +19324,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Compute statistical significance and show Pearson coefficient and p-value.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Compute statistical significance and show Pearson correlation coefficient and p-value.</span>
 <span class="n">delays</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CARRIER_DELAY&#39;</span><span class="p">,</span> <span class="s1">&#39;LATE_AIRCRAFT_DELAY&#39;</span><span class="p">,</span> <span class="s1">&#39;NAS_DELAY&#39;</span><span class="p">,</span> <span class="s1">&#39;WEATHER_DELAY&#39;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">delay</span> <span class="ow">in</span> <span class="n">delays</span><span class="p">:</span>
     <span class="n">coefficient</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">flights</span><span class="p">[</span><span class="s1">&#39;ARR_DELAY&#39;</span><span class="p">],</span> <span class="n">flights</span><span class="p">[</span><span class="n">delay</span><span class="p">])</span>
@@ -19478,8 +19480,26 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>It can be concluded that the biggest cause of flight delays is the late aircraft delay. This is where an aircraft arrives late at a previous airport, which then causes an arrival delay at the current airport. The ripple effect of an earlier delay at previous airports is referred to as delay propagation.</p>
-<p>Carrier delays and NAS delays also contribute to flight delays, but to a lesser extent.</p>
+<p>It can be concluded that the biggest cause of flight delays are late aircraft delays, followed by carrier delays. NAS delays also contribute to flight delays, but to a lesser extent.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The implications of this analysis are that the two biggest causes of flight delays are within the control of the airlines.</p>
+<p>Late aircraft delay is when an aircraft is late to an airport due to its late arrival at a previous airport. The ripple effect of an earlier delay at previous airports is referred to as delay propagation.</p>
+<p>Carrier delay is a delay caused by one or more carrier tasks that do not complete on time.  For example, aircraft cleaning, fueling, maintenance, and cargo loading.</p>
+<p>Two recommended courses of action based on these findings are:</p>
+<ul>
+<li>Airlines should allow aircraft to increase speed in order to eliminate or reduce the late aircraft delay.</li>
+<li>Airlines should do their best to reduce carrier delay, e.g., calculate the optimal number of cleaning staff needed to clean an aircraft quickly.</li>
+</ul>
 
 </div>
 </div>
